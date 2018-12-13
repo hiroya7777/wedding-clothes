@@ -2,11 +2,11 @@
   <div class ="container">
     <div class ="row">
       <div class = 'col-md-offset-4 col-md-4 users-new-container'>
-        <h1 class = "text-container text-white">Log In</h1>
+        <h1 class = "text-container text-white">Email</h1>
         <%= form_for :session, url: login_path do |f| %>
         <div class = "form-group">
-          <%= f.label :AcountName, class: 'text-white' %>
-          <%= f.text_field :AcountName, class:'form-control' %>
+          <%= f.label :email, class: 'text-white' %>
+          <%= f.text_field :email, class:'form-control' %>
         </div>
 
        <div class ="form-group">
