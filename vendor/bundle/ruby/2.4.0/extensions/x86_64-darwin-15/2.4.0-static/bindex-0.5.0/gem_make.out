@@ -1,0 +1,15 @@
+current directory: /Users/kawaguchihiroya/wedding-clothes/wedding-clothes/vendor/bundle/ruby/2.4.0/gems/bindex-0.5.0/ext/bindex
+/Users/kawaguchihiroya/.rbenv/versions/2.4.1/bin/ruby -r ./siteconf20181222-29329-agomq9.rb extconf.rb
+creating Makefile
+
+current directory: /Users/kawaguchihiroya/wedding-clothes/wedding-clothes/vendor/bundle/ruby/2.4.0/gems/bindex-0.5.0/ext/bindex
+make "DESTDIR=" clean
+
+current directory: /Users/kawaguchihiroya/wedding-clothes/wedding-clothes/vendor/bundle/ruby/2.4.0/gems/bindex-0.5.0/ext/bindex
+make "DESTDIR="
+compiling cruby.c
+linking shared-object bindex/cruby.bundle
+
+current directory: /Users/kawaguchihiroya/wedding-clothes/wedding-clothes/vendor/bundle/ruby/2.4.0/gems/bindex-0.5.0/ext/bindex
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 cruby.bundle ./.gem.20181222-29329-1x0uytk/bindex

@@ -8,8 +8,8 @@ class TopicsController < ApplicationController
   end
 
   def create
-    @topic = current_user.topics.new(topic_params)
-
+    @topic =current_user.topics.new(topic_params)
+     binding pry 
     if @topic.save
       redirect_to topics_path, success ="投稿に成功しました"
     else
@@ -18,8 +18,9 @@ class TopicsController < ApplicationController
     end
   end
 
+
   private
-    def topics_params
-      params.require(:topics).permit(:image,:description)
+    def topic_params
+      params.require(:topic).permit(:image,:description,:skill_list)
     end
 end
