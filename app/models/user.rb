@@ -6,5 +6,5 @@ class User < ApplicationRecord
   #validates :password, presence: true, format: { with: PW_REGEX }
   #validates :password_confirmation, presence: true, format: { with: PW_REGEX }
   has_many :topics
-
+  has_many :likes
 end

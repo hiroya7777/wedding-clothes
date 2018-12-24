@@ -6,6 +6,10 @@ h1, h2 {
   color: #fff;
 }
 
+logo.png{
+  weight:10px;
+}
+
 .btn-white {
   color: #fff;
   border: 1px solid #fff;
@@ -115,10 +119,11 @@ h1, h2 {
       padding-left: 20px;
     }
 
-    img {
-      margin-top: 10px;
-      margin-bottom: 20px;
-      width: 100%;
+  img {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    width: 100%;
+
     }
 
     .topic-index-icon {
@@ -127,4 +132,21 @@ h1, h2 {
       margin-left: 20px;
     }
   }
+}
+
+.navbar-transparent {
+  margin-bottom: 0px;
+  background-color: rgba(0,0,0,0.5);
+  a {
+    color: #fff !important;
+  }
+
+  .navbar-brand {
+    padding: 0px;
+    margin-top: 15px;
+  }
+}
+
+.navbar-right{
+  padding: 15px 0;
 }
