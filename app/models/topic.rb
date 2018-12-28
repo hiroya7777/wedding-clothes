@@ -7,4 +7,5 @@ class Topic < ApplicationRecord
  mount_uploader :image,ImageUploader
  acts_as_taggable_on :skills
  has_many :likes
+ has_many :like_users, through: :likes, source: 'user'
 end

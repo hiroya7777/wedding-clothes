@@ -6,7 +6,7 @@ class LikesController < ApplicationController
     user_id: current_user.id,
     topic_id: params[:topic_id])
     @like.save
-    redirect_to ("/topics/#{params[:topic_id]}")
+    redirect_to topics_path
   end
   def destroy
     @like = Like.find_by(

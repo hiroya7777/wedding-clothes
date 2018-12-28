@@ -23,6 +23,7 @@ logo.png{
   }
 }
 
+
 .top-hero-wrapper {
   width: 100vw;
   height: 100vh;
@@ -76,18 +77,21 @@ logo.png{
   z-index: 10000;
 }
 
-.btn-black {
-  color: #565656;
-  border: 1px solid #565656;
+
+.btn-block {
+  color: #C0C0C0;
+  border: 3px solid #C0C0C0;
   padding-top: 15px;
   padding-bottom: 15px;
-  font-size: 20px;
+  font-size: 15px;
   background-color: rgba(0,0,0,0.0);
+
 
   &:hover {
     color: #565656;
   }
 }
+
 
 .topic-new-wrapper {
   padding-top: 120px;
@@ -96,22 +100,24 @@ logo.png{
   margin-bottom:100px;
 }
 
-
-
-
 .topic-index-wrapper {
   padding-top: 70px;
   background-color: #fafafa;
-  .topic-index-single {
-    background-color: #fff;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    margin-top: 30px;
-    border: 1px solid #e6ecf0;
-    border-radius: 3px;
-    .topic-author {
-      padding-right: 20px;
-      padding-left: 20px;
+.container{
+  
+}
+
+.topic-index-single {
+  background-color: #fff;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin-top: 30px;
+  border: 1px solid #e6ecf0;
+  border-radius: 3px;
+
+.topic-author {
+  padding-right: 20px;
+  padding-left: 20px;
     }
 
     .topic-text {
@@ -125,6 +131,7 @@ logo.png{
     width: 100%;
 
     }
+
 
     .topic-index-icon {
       width: 35px;

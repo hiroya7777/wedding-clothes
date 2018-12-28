@@ -7,4 +7,5 @@ class User < ApplicationRecord
   #validates :password_confirmation, presence: true, format: { with: PW_REGEX }
   has_many :topics
   has_many :likes
+  has_many :like_topics, through: :likes, source: 'topic'
 end

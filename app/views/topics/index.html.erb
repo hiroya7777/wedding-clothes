@@ -7,21 +7,20 @@
             <h2 class="topic-author">
               <%= topic.user.name %>
             </h2>
-              <%= image_tag topic.image.url %>
+              <%= image_tag topic.image.url, id: :image_prev if topic.image? %>
           　<p class="topic-text">
               <%= topic.description %>
               <%= topic.skill_list %>
 
             <% if Like.find_by(user_id: current_user.id, topic_id: topic.id) %>
-                <%= link_to("/likes/#{topic.id}/destroy", {method: "topic"}) do %>
-            <% end %>
-              <% else %>
-                <%= link_to("/likes/#{topic.id}/create", {method: "topic"}) do %>
-                <%= image_tag 'heart-black.png', class: 'topic-index-icon' %>
+              <%= link_to("/likes/#{topic.id}/destroy", {method: "topic"}) do %>
               <% end %>
             <% end %>
-            
-           </p>
+            <%= link_to(likes_path(topic_id: topic.id), {method: :post}) do %>
+              <%= image_tag 'heart-black.png', class: 'topic-index-icon' %>
+            <% end %>
+            <%= topic.likes.count %>
+            </p>
           </div>
         </div>
       </div>

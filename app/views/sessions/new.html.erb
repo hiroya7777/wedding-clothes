@@ -4,12 +4,12 @@
       <div class = 'col-md-offset-4 col-md-4 users-new-container'>
         <h1 class = "text-container text-white">会員情報を入力</h1>
         <%= form_for :session, url: login_path do |f| %>
-        <div class = "form-group1">
+        <div class = "form-group">
           <%= f.label :email, class: 'text-white' %>
           <%= f.text_field :email, class:'form-control' %>
         </div>
 
-       <div class ="form-group1">
+       <div class ="form-group">
           <%= f.label :password, class: 'text-white' %>
           <%= f.password_field :password, class:'form-control' %>
        </div>

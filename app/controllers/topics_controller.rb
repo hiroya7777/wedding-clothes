@@ -1,8 +1,6 @@
 class TopicsController < ApplicationController
   def index
-    @topics = Topic.all
-
-    
+    @topics = Topic.all.includes(:like_users)
   end
 
   def new
@@ -21,6 +19,6 @@ class TopicsController < ApplicationController
 
  private
     def topic_params
-      params.require(:topic).permit(:image,:description,:skill_list)
+      params.require(:topic).permit(:image,:description,:skill_list,:remove_image)
     end
 end

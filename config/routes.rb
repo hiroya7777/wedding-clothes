@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :projects
   get 'topics/new'
   get 'sessions/new'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
@@ -13,6 +14,6 @@ Rails.application.routes.draw do
  delete '/logout', to:'sessions#destroy'
 
  resources :topics
- post "likes/:topic_id/create" => "likes#create"
- post "likes/:topic_id/destroy" => "likes#destroy"
+ post "likes", to: "likes#create"
+ delete "likes" ,to: "likes#destroy"
 end
