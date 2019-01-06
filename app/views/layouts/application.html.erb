@@ -16,40 +16,36 @@
     <% flash.each do |key, value| %>
       <div class="alert alert-<%= key %>" role="alert"><%= value %></div>
     <% end %>
+    <nav class="menu">
 
-    <nav class="navbar navbar-default navbar-fixed-top navbar-transparent">
-      <div class="container">
-        <%= link_to root_path do %>
-          <span><%= image_tag "logo.png", class: "navbar-brand" %></span>
-        <% end %>
-        <ul class="nav navbar-nav navbar-right">
-          <% if logged_in? %>
-          <li>
-            <%= link_to '写真投稿',new_topic_path,class: 'btn btn-block btn-white' %>
-　　　　　　　
-          </li>
-          <li>
-            <%= link_to '写真投稿一覧',topics_path,class: 'btn btn-block btn-white' %>
+      <ol>
+        <li class="menu-item"><%= link_to 'Home',root_path  %></li>
+        <li class="menu-item"><a href="#0">About</a></li>
+        <li class="menu-item">
 
-          </li>
-          <li>
-            <%= link_to 'ログアウト',logout_path, method: :delete,class: 'btn btn-block btn-white' %>
-          </li>
-           <% else %>
-          <li>
-            <%= link_to '新規ユーザー登録', new_user_path, class: 'btn btn-block btn-white' %>
+          <a href="#0">User</a>
+          <ol class="sub-menu">
+            <li class="menu-item"><%= link_to 'User Register',new_user_path %></li>
+            <li class="menu-item"><%= link_to 'User Login',login_path %></li>
+　　　　　　　<li class="menu-item"><%= link_to 'User Logout',logout_path, method: :delete %></li>
+          </ol>
+        </li>
 
-          </li>
-          <li>
-            <%= link_to 'ログイン',login_path,class: 'btn btn-block btn-white' %>
+        <li class="menu-item">
+          <a href="#0">Photos</a>
+          <ol class="sub-menu">
+            <% if logged_in? %>
+            <li class="menu-item"><%= link_to 'Post New Photos',new_topic_path %></li>
+            <% else %>
+            <li class="menu-item"><%= link_to 'Post New Photos',login_path %></li>
+            <% end %>
+            <li class="menu-item"><%= link_to 'Photo List',topics_path %></li>
+          </ol>
+        </li>
+        <li class="menu-item"><%= link_to 'Contact',index_path %></li>
+      </ol>
 
-          </li>
-　　　　  <% end %>
-        </ul>
-
-      </div>
     </nav>
-
     <%= yield %>
 
     <script>
@@ -57,5 +53,6 @@
          $(".alert").fadeOut(5000);
       });
     </script>
+
   </body>
-</html>
+  </html>

@@ -3,6 +3,7 @@ class PagesController < ApplicationController
     @topics = Topic.all
   end
 
-  def help
+  def about
   end
+
 end
