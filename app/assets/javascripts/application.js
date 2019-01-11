@@ -13,16 +13,5 @@
 //= require rails-ujs
 //= require activestorage
 //= require turbolinks
-//= require_tree .
 //= require jquery
 //= require bootstrap-sprockets
-console.clear();
-
-ScrollOut({
-  cssProps: {
-    visibleY: true,
-    viewportY: true
-  }
-});
-
-Splitting({ target: '.heading' });

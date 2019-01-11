@@ -11,10 +11,11 @@
           　<p class="topic-text">
               <%= topic.description %>
               <%= topic.skill_list %>
-
+            <% if logged_in? %>
             <% if Like.find_by(user_id: current_user.id, topic_id: topic.id) %>
               <%= link_to("/likes/#{topic.id}/destroy", {method: "topic"}) do %>
               <% end %>
+            <% end %>
             <% end %>
             <%= link_to(likes_path(topic_id: topic.id), {method: :post}) do %>
               <%= image_tag 'heart-black.png', class: 'topic-index-icon' %>
