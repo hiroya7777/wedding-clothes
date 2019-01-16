@@ -2,11 +2,11 @@
   <div class="container">
     <div class="row">
       <div class= "col-md-6 col-md-offset-3">
-        <h1 class= "text-center">コーディネート投稿</h1>
+        <h1 class= "text-center text-white">Coordinate Post</h1>
           <%= form_for @topic  do |f| %>
           <div class= "form-group" %>
-            <%=f.label :コーディネート写真 %>
-            <%=f.file_field :image %>
+            <%=f.label :コーディネート写真,class:'text-white' %>
+            <%=f.file_field :image,class:'text-white' %>
           <script type="text/javascript">
             $(function() {function readURL(input) {
               if (input.files && input.files[0]) {var reader = new FileReader();
@@ -20,27 +20,27 @@
               });
              });
           </script>
-            <p><%= f.check_box :remove_image %>画像を削除する</p>
+            <p><%= f.check_box :remove_image  %>画像を削除する</p>
 
           </div>
           <div class="form-group" %>
-            <%= f.label :コーディネート詳細 %>
+            <%= f.label :コーディネート詳細,class:'text-white' %>
             <%= f.text_area :description,class: 'form-control' %>
           </div>
           <div class="form-group" %>
-            <%= f.label :"性別" %><br>
+            <%= f.label :"性別",class:'text-white' %><br>
             <%= f.select :description, [["MEN", "MEN"], ["WOMEN", "WOMEN"],["KID", "KID"]], class:"form-control" %>
           </div>
           <div class="form-group" %>
-            <%= f.label :"年齢" %><br>
+            <%= f.label :"年齢",class:'text-white' %><br>
             <%= f.select :description, [["10代", "10代"],["20代", "20代"], ["30代", "30代"],["40代", "40代"],["50代", "50代"],["60代", "60代"]], class:"form-control" %>
           </div>
           <div class="form-group" %>
-            <%= f.label :"着用シーン" %><br>
+            <%= f.label :"着用シーン",class:'text-white' %><br>
             <%= f.select :description, [["友人・同期の式", "友人・同期の式"],["先輩・上司の式", "先輩・上司の式"],["親族・本人の式", "親族・本人の式"]], class:"form-control" %>
           </div>
           <div class="form-group">
-            <%= f.label :skill_list, 'タグ' %><br/>
+            <%= f.label :skill_list, 'タグ',class:'text-white' %><br/>
             <%= text_field_tag 'topic[skill_list]', @topic.skill_list.join(',') %>
           </div>
             <%= f.submit '投稿', class: 'btn btn-block btn-black' %>

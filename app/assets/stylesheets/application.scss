@@ -1,3 +1,13 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 @import 'custom';
+
+@media (max-width:1000px) {
+  .lesson{
+    width:50%;
+    margin-bottom:50PX;
+  }
+  /* lessonクラスのCSSを指定してください */
+
+
+}

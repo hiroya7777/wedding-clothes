@@ -1,3 +1,6 @@
+*{
+  box-sizing: border-box;
+}
 h1, h2 {
   font-weight: 200;
   font-size: 50px
@@ -33,7 +36,7 @@ logo.png{
   background: image-url('ma');
   background-position: center;
   background-repeat: no-repeat;
-  background-attachment: fixed;
+  background-attachment:fixed;
   background-size: cover;
   background-color: #464646;
 }
@@ -122,9 +125,9 @@ logo.png{
 
 
 .topic-new-wrapper {
-  padding-top: 120px;
-  background-color: white;
-
+  padding-top: 150px;
+  background-color: #464646;
+  height:100%;
 }
 .text-center{
   margin-bottom:100px;
@@ -135,7 +138,6 @@ logo.png{
   padding-top: 70px;
 
 .container{
-
 }
 
 .topic-index-single {
@@ -680,18 +682,13 @@ body, html {
 
 .message-new-wrapper {
   padding-top: 220px;
-  background-color: white;
+  height:100%;
   font-size: 15px;
+  background-color: #fff;
 }
 .simple_form {
-  width: 100px;
-  height: 100px;
-  margin:100px;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
-  background-color: #fff;
-
+    width: 100%;
+    margin: 0 auto;
   .form-group-invalid {
     label {
         color: red;
@@ -699,7 +696,6 @@ body, html {
     .form-control {
         border: 1px solid red;
     }
-
     .invalid-feedback {
         color: red;
     }
