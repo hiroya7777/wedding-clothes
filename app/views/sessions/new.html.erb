@@ -2,7 +2,7 @@
   <div class ="container">
     <div class ="row">
       <div class = 'col-md-offset-4 col-md-4 users-new-container'>
-        <h1 class = "text-container text-white">会員情報を入力</h1>
+        <h1 class = "text-container text-white">Register</h1>
         <%= form_for :session, url: login_path do |f| %>
         <div class = "form-group">
           <%= f.label :email, class: 'text-white' %>
@@ -14,7 +14,7 @@
           <%= f.password_field :password, class:'form-control' %>
        </div>
 
-       <%= f.submit "ログイン",class: "btn-block btn-white" %>
+       <%= f.submit "Login",class: "btn-block btn-white" %>
        <% end %>
      </div>
    </div>
